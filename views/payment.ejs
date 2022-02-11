@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "Favorit SSENSE Inter";
+      color: #777;
+    }
+
+    #nav-div {
+      display: flex;
+      overflow: hidden;
+      background-color: white;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    #nav-img {
+      display: block;
+      text-align: center;
+      width: 500px;
+      height: 50px;
+      margin: auto;
+    }
+
+    #nav-img img {
+      width: 30%;
+    }
+
+    #orderMsg h1 {
+      margin: 2%;
+    }
+
+    #orderMsg {
+      margin-top: 5%;
+    }
+
+    #orderMsg h2 {
+      margin: 2%;
+    }
+
+    #hombtn {
+      margin: 2%;
+      background-color: black;
+      padding: 1%;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #hombtn:hover {
+      color: rgb(207, 207, 207);
+    }
+
+    #footer {
+      position: fixed;
+      right: 0px;
+      bottom: 0px;
+      background-color: black;
+      width: 100%;
+      height: 35px;
+    }
+
+    .footer1 {
+      width: 90%;
+      color: #777;
+      margin-left: 20%;
+    }
+
+    .footer1 span {
+      margin: 1%;
+      font-size: 12px;
+    }
+
+    .footer2 {
+      width: 30%;
+      color: #777;
+      margin: auto;
+    }
+
+    .footer2 span {
+      margin: 1%;
+      font-size: 11px;
+    }
+
+    span:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="nav-div">
+    <div id="nav-img">
+      <img src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" />
+    </div>
+  </div>
+  <div id="orderMsg">
+    <h1>Order Placed Successfully</h1>
+    <h2> <span>Your order number :</span> <span id="orderNo"></span></h2>
+    <button onclick="gotohome()" id="hombtn">Continue Shopping</button>
+  </div>
+  <div id="footer">
+    <div class="footer1">
+      <span>COUNTRY/REGION : INDIA</span><span>CUSTOMER CARE</span><span>LOCATION</span><span>EDITORIAL
+        ARCHIVE</span><span>CAREERS</span><span>AFFILATES</span><span>SITEMAP</span>
+    </div>
+    <div class="footer2">
+      <span>2021 ssense.com</span><span>Terms & Conditions</span><span>Privacy
+        Policy</span><span>Cookies</span><span>Accessibility</span>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  document.getElementById("orderNo").innerText = randNum();
+  document.getElementById("orderNo").style.color = "black";
+  function randNum() {
+    return Math.floor((Math.random() * 249037) + 189654);
+  }
+  function gotohome() {
+    window.location.href = "/";
+  }    
+</script>

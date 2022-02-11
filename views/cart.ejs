@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/navbar.css">
+    <link rel="stylesheet" href="style/global.css">
+    <link rel="stylesheet" href="style/cart.css" />
+</head>
+
+<body>
+    <nav>
+
+    </nav>
+    <div class="nav"></div>
+    <div class="container">
+        <div class="Shopping_inner">
+            <h1>
+                <span class="Shopping">Shopping Cart</span>
+            </h1>
+        </div>
+    </div>
+    <div>
+        <div class="Courses_cart">
+            <h3 id="courses_zero">0 Courses in Cart</h3>
+        </div>
+    </div>
+    <div id="container">
+        <div class="in_div">
+            <img alt="" width="240" height="180" class="empty-cart-img"
+                src="https://s.udemycdn.com/browse_components/flyout/empty-shopping-cart-v2.jpg" />
+            <p class="card-empty">
+                Your cart is empty. Keep shopping to find a course!
+            </p>
+            <div id="div_button">
+                <a class="btn" href="/">Keep shopping</a>
+            </div>
+        </div>
+    </div>
+
+
+    <footer style=" margin-top:100px; position:relative; background-color: black; color:white !important;">
+
+    </footer>
+</body>
+<script type="module">
+    import navbar from "./components/navbar.js"
+    import footer from "./components/footer.js"
+    document.querySelector("nav").innerHTML = navbar()
+    document.querySelector("footer").innerHTML = footer()
+    document.querySelector(".remove-sale").addEventListener("click", () => {
+        document.querySelector(".sale-nav").style.display = "none"
+    })
+
+
+    ////////
+    // change mode
+    if (JSON.parse(localStorage.getItem("theme")) == "dark") {
+        document.querySelector("body").classList.add("dark-theme")
+        document.querySelector("#logo-img").src = "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg"
+    } else {
+        document.querySelector("#logo-img").src = "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
+        document.querySelector("body").classList.remove("dark-theme")
+    }
+    document.querySelector(".mods").addEventListener("click", () => {
+        document.querySelector(".mods").classList.toggle("light-mode")
+        changeTheme()
+    })
+    function changeTheme() {
+        let mode = JSON.parse(localStorage.getItem("theme"))
+        if (mode == "dark") {
+            document.querySelector("#logo-img").src = "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
+            document.querySelector("body").classList.remove("dark-theme")
+            localStorage.setItem("theme", JSON.stringify("light"))
+        } else {
+            document.querySelector("body").classList.add("dark-theme")
+            document.querySelector("#logo-img").src = "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg"
+
+            localStorage.setItem("theme", JSON.stringify("dark"))
+
+        }
+    }
+    /////////////
+    // navbar end
+    let login = JSON.parse(localStorage.getItem("token"))
+    if (login) {
+        document.querySelector(".sign-log").classList.add("loged")
+    }
+</script>
+<script src="scripts/cart.js"></script>
+
+</html>
+<script type="module" src="scripts/search.js"></script>
+<script type="module" src="scripts/cat-menu.js"></script>

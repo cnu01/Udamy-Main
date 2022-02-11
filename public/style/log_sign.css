@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  #up {
+    margin: auto;
+    width: 25%;
+    text-align: center;
+    margin-bottom: 3%;
+  }
+  form {
+    width: 25%;
+    margin: auto;
+  }
+  .input-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .icon {
+    position: absolute;
+    min-width: 50px;
+    text-align: center;
+    margin: 1%;
+  }
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-size: 18px;
+    text-align: center;
+  }
+  .input-field:focus {
+    border: 2px solid #a435f0;
+  }
+  .btn {
+    background-color: #a435f0;
+    color: white;
+    height: 43px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  #goto{
+    margin: auto;
+    width: 25%;
+    text-align: center;
+  }

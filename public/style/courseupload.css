@@ -1,0 +1,95 @@
+@import url('/assets/FontsFree-Net-SFProText-Regular.ttf');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'sf pro text', sans-serif;;
+}
+.top{
+    align-items: center;
+   display:flex;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   padding:0px 20px;
+   box-sizing: border-box;
+   justify-content:space-between;
+   background-color: black;
+   color: white;
+   height: 50px;
+}
+.left{
+   display:flex;
+   align-items: center;
+}
+.back p{
+    font-size: 19px;
+    display:flex;
+    cursor: pointer;
+    align-items: center;
+    padding-left: 30px;
+    font-weight: 100;
+ }
+ .right button{
+     background-color:gray;
+     border:none;
+     color:white;
+     cursor: pointer;
+     margin-right: 30px;
+     padding:7px 20px;
+ }
+
+
+ /* ///////////// */
+ .container{
+     width: 70%;
+     position:relative;
+     top: 150px;
+     left: 50%;
+     transform: translate(-50%,0);
+     padding: 50px;
+     border:1px solid rgb(129, 129, 129);
+ }
+ .field{
+     display:flex;
+     flex-direction: column;
+     height: 30px;
+     margin: 40px 0px;
+     margin-left: 40px;
+ }
+ #thumbnails{
+     padding-bottom:20px;
+     display: flex;
+     margin-top: 10px;
+     align-items: center;
+     width: 400px;
+     border:1px solid rgb(212, 212, 212)
+ }
+ .right-field{
+   position:absolute;
+   right: 0;
+   top: 10%;
+   width: 50%;
+ }
+ form{
+     height:100%;
+ }
+ .field label{
+     margin-bottom: 10px;
+ }
+ .field input{
+ padding: 10px;
+     width: 30%;
+ }
+ .field select{
+    padding: 10px;
+     width: 32%;
+ }
+ input[type="submit"]{
+     width: 400px;
+     margin-top: 30px;
+     background-color:#a435f0;
+     height: 40px;
+     border:none;
+     color:white;
+     cursor: pointer;
+ }

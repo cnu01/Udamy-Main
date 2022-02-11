@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/step4.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="top">
+        <div class="left">
+            <div class="logo">
+                <img src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" alt="" srcset="">
+            </div>
+            <div class="steps">
+
+                <p>Step<span class="step-count">
+                        4
+                    </span>
+                    of
+                    4</p>
+            </div>
+        </div>
+
+        <div class="right">
+            <a href="/instructor">Exit</a>
+        </div>
+        <div class="process"></div>
+    </nav>
+
+    <div class="container">
+        <h1>How much time can you spend creating your course per week?</h1>
+        <p>There's no wrong answer. We can help you achieve your goals even if you don't have much time.</p>
+        <div class="text-field">
+            <div class="box active"><span></span>
+                <p>I’m very busy right now (0-2 hours)</p>
+            </div>
+            <div class="box"><span></span>
+                <p>I’ll work on this on the side (2-4 hours)</p>
+            </div>
+            <div class="box"><span></span>
+                <p>I have lots of flexibility (5+ hours)</p>
+            </div>
+            <div class="box"><span></span>
+                <p>I haven’t yet decided if I have time</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="buttons">
+            <a href="/instructor/create/2"> <button>Previous</button></a>
+            <a href="/instructor/create/upload"> <button>Create Course</button></a>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script>
+    let box = document.querySelectorAll(".box")
+    box.forEach((b) => {
+        b.onclick = () => {
+            b.classList.add("active")
+            remove(b)
+        }
+    })
+    function remove(ac) {
+        box.forEach((b) => {
+            if (b !== ac) {
+                b.classList.remove("active")
+            }
+        })
+    }
+</script>

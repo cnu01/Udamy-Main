@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/step3.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="top">
+        <div class="left">
+            <div class="logo">
+                <img src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" alt="" srcset="">
+            </div>
+            <div class="steps">
+
+                <p>Step<span class="step-count">
+                        3
+                    </span>
+                    of
+                    4</p>
+            </div>
+        </div>
+
+        <div class="right">
+            <a href="/instructor">Exit</a>
+        </div>
+        <div class="process"></div>
+    </nav>
+
+    <div class="container">
+        <h1>What category best fits the knowledge you'll share?</h1>
+        <p>If you're not sure about the right category, you can change it later.</p>
+        <div class="text-input">
+            <select name="" id="select">
+                <option value="">Choose a category</option>
+            </select>
+        </div>
+    </div>
+    <footer>
+        <div class="buttons">
+            <a href="/instructor/create/2"> <button>Previous</button></a>
+            <a href="/instructor/create/4"> <button>Continue</button></a>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script>
+
+    let data = JSON.parse(localStorage.getItem("create-course"))
+    if (data.subCat == "") {
+        data = { tag: '61e924bc9ad44ed5f41a26c0', subCat: '61e91fd0250f032ce597f451' }
+    }
+    let select = document.querySelector("#select")
+    async function mapOptions() {
+        let res = await fetch(`/subcategory/${data.subCat}`)
+        let d = await res.json()
+        setTimeout(() => {
+            findCat(d.mainCat)
+        }, 1000)
+
+    }
+    async function findCat(mainCat) {
+        let res = await fetch(`/subcategory?maincat=${mainCat}`)
+        let data = await res.json()
+        mapOp(data)
+    }
+    mapOptions()
+
+    function mapOp(data) {
+        data.forEach(({ name }) => {
+            let op = document.createElement("option")
+            op.textContent = name
+            select.append(op)
+        })
+    }
+
+</script>

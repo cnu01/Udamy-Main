@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="style/log_sign.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <div id="up">
+    <h2>Sign Up and Start Learning!</h2>
+    <hr />
+  </div>
+  <form action="/register" method="post" id="form">
+    <div class="input-container">
+      <i class="fa fa-user icon"></i>
+      <input class="input-field" type="text" placeholder="Full Name" name="fname" id="name" />
+    </div>
+
+    <div class="input-container">
+      <i class="fa fa-envelope icon"></i>
+      <input class="input-field" type="text" placeholder="Email" name="email" id="email" />
+    </div>
+
+    <div class="input-container">
+      <i class="fa fa-key icon"></i>
+      <input class="input-field" type="password" placeholder="Password" name="password" id="pass" />
+    </div>
+    <input type="submit" class="btn"></input>
+  </form>
+  <div id="goto">
+    <p>Already have an account? <a href="/login">Login</a></p>
+  </div>
+</body>
+
+</html>
+<script>
+  document.querySelector("#form").addEventListener('submit', async (event) => {
+    event.preventDefault();
+     await fetch(event.target.action, {
+      method: 'POST',
+      body: new URLSearchParams(new FormData(event.target))
+    })
+    location.href = "/login"
+  });
+</script>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://www.udemy.com/staticx/udemy/images/v8/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://www.udemy.com/staticx/udemy/images/v8/favicon-16x16.png" />
+    <meta name="title" content="Online Courses - Learn Anything, On Your Schedule | Udemy">
+    <link rel="stylesheet" href="/style/global.css">
+    <link rel="stylesheet" href="/style/navbar.css">
+    <link rel="stylesheet" href="/style/product.css">
+    <link rel="stylesheet" href="/style/course-list.css">
+
+    <title>Online Courses - Learn Anything, On Your Schedule | Udemy</title>
+</head>
+
+<body>
+    <nav>
+    </nav>
+    <div class="name-div">
+        <h1 class="course-name">
+            <%=sub%> Courses
+        </h1>
+        <p class="course-title">
+            <%if(sub==null){%>
+                <%=main%> relates to <a href="/courses/<%=main%>">
+                        <%=main%>
+                    </a>
+                    <%}else if(tag==null){%>
+                        <%=sub%> relates to <a href="/courses/<%=main%>">
+                                <%=main%>
+                            </a>
+                            <%}else{%>
+                                <%=tag%> relates to <a href="/courses/<%=main%>/<%=sub%>">
+                                        <%=sub%>
+                                    </a>
+                                    <%}%>
+        </p>
+        <span class="learners">12,345 learners</span>
+    </div>
+    <div class="course-list">
+        <div>
+            <div class="slide">
+            </div>
+        </div>
+        <button class="next-slide" id="slide1">
+            <img class="icon" src="/assets/next.png" alt="" srcset="">
+        </button>
+        <button class="prev-slide" id="slideP1">
+            <img class="icon" src="/assets/next.png" alt="" srcset="">
+        </button>
+    </div>
+
+    <div class="prod-head">
+        <h2>All Development courses</h2>
+        <div class="not-sure">
+            <button>i</button>
+            <p>information alert Not sure? All courses have a 30-day money-back guarantee</p>
+        </div>
+    </div>
+    <div class="sort-head">
+        <div class="sort-box">
+            <div class="filter-toggle">
+                <img class="icon" src="/assets/filter.png" alt="" srcset="">
+                Filter
+            </div>
+            <div class="sort">
+                <p class="sort-by">Sort by</p>
+                <select value="">
+                    <option value="most">Most Popular</option>
+                    <option value="high">Highest Rated</option>
+                    <option value="new">Newest</option>
+                </select>
+            </div>
+        </div>
+        <div class="resuts">
+            <h4>
+                <%=length%> results
+            </h4>
+        </div>
+    </div>
+    <div class="main-products">
+        <div class="left-filters">
+            <!-- ///////////// -->
+            <div class="topics">
+                <div style="border-top: 1px solid var(--faded-color);" class="fil-title fil-active">
+                    <h2>Topic</h2>
+                    <img class="icon" src="/assets/up.png" alt="" srcset="">
+                </div>
+                <div class="fil-data topic-cat-fil"></div>
+            </div>
+            <!-- //////////////// -->
+            <div class="sub-cat">
+                <div class="fil-title fil-active">
+                    <h2>Subcategory</h2>
+                    <img class="icon" src="/assets/up.png" alt="" srcset="">
+                </div>
+                <div class="fil-data sub-cat-fil"></div>
+            </div>
+
+            <div class="level">
+                <div class="fil-title fil-active">
+                    <h2>Level</h2>
+                    <img class="icon" src="/assets/up.png" alt="" srcset="">
+                </div>
+                <div class="fil-data">
+                    <p class="fil-p">
+                        <input type="checkbox" value="all-levels,level">
+                        All Levels
+                    </p>
+                    <p class="fil-p">
+                        <input type="checkbox" value="beginner,level">
+                        Beginner
+                    </p>
+                    <p class="fil-p">
+                        <input type="checkbox" value="intermediate,level">
+                        Intermediate
+                    </p>
+                    <p class="fil-p">
+                        <input type="checkbox" value="expert,level">
+                        Expert
+                    </p>
+                </div>
+            </div>
+            <div class="price">
+                <div class="fil-title fil-active">
+                    <h2>Price</h2>
+                    <img class="icon" src="/assets/up.png" alt="" srcset="">
+                </div>
+                <div class="fil-data">
+                    <p class="fil-p">
+                        <input type="checkbox" value="paid,price">
+                        Paid (8,358)
+                    </p>
+                    <p class="fil-p">
+                        <input type="checkbox" value="free,price">
+                        Free (1,247)
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- ///////////////////////////////////////////////////// -->
+
+        <div class="right-products">
+            <% data.forEach((item)=>{%>
+                <div>
+                    <div class="left-prod">
+                        <div class="prod-img-div"><img src="<%=item.thumbnails%>"></div>
+                        <div class="prod-txt-div">
+                            <h3>
+                                <%=item.title%>
+                            </h3>
+                            <p>
+                                <%=item.description%>
+                            </p><span class="prod-ch-name">
+                                <%=item.creater_name%>
+                            </span><span class="vid-detail">
+                                <%=item.duration%>
+                                    <div></div>
+                                    <%=item.lecture%>
+                                        <div>
+                                        </div>
+                                        <%=item.level%>
+                            </span>
+                        </div>
+                        <div class="hover-div" style="display: none;">
+                            <h4>What you’ll learn</h4>
+                            <p><img class="icon tick" src="/assets/tick.png"> Top quelity Course for all levels</p>
+                            <p><img class="icon tick" src="/assets/tick.png"> Learn how your listening dictates your
+                                reality
+                                and</p>
+                            <p><img class="icon tick" src="/assets/tick.png"> Use de-facto standard routing solution
+                                for
+                                React</p>
+                            <input type="hidden" class="idValue" name="" value="<%=item._id%>">
+                            <div class="cart-div"><button class="addToCart">Add To Cart</button></div>
+                        </div>
+                    </div>
+                    <div class="price-sec">
+                        <p>₹525</p><span>₹3,499</span>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+    </div>
+
+
+
+    <footer style=" margin-top:100px; position:relative; background-color: black; color:white !important;">
+
+    </footer>
+</body>
+
+</html>
+
+<script type="module">
+    import navbar from "/components/navbar.js"
+    import cousreList from "/components/courseList.js"
+    import footer from "/components/footer.js"
+
+    document.querySelector("nav").innerHTML = navbar()
+    document.querySelector("footer").innerHTML = footer()
+    document.querySelector(".remove-sale").addEventListener("click", () => {
+        document.querySelector(".sale-nav").style.display = "none"
+    })
+    if (JSON.parse(localStorage.getItem("theme")) == "dark") {
+        document.querySelector("body").classList.add("dark-theme")
+        document.querySelector("#logo-img").src = "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg"
+    } else {
+        document.querySelector("#logo-img").src = "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
+        document.querySelector("body").classList.remove("dark-theme")
+    }
+    document.querySelector(".mods").addEventListener("click", () => {
+        document.querySelector(".mods").classList.toggle("light-mode")
+        changeTheme()
+    })
+    function changeTheme() {
+        let mode = JSON.parse(localStorage.getItem("theme"))
+        if (mode == "dark") {
+            document.querySelector("#logo-img").src = "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
+            document.querySelector("body").classList.remove("dark-theme")
+            localStorage.setItem("theme", JSON.stringify("light"))
+        } else {
+            document.querySelector("body").classList.add("dark-theme")
+            document.querySelector("#logo-img").src = "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg"
+
+            localStorage.setItem("theme", JSON.stringify("dark"))
+
+        }
+    }
+    let d = JSON.parse(localStorage.getItem("react"))
+    cousreList(d, document.querySelector(".slide"))
+    document.querySelector("#slide1").onclick = () => {
+        document.querySelector(".slide").style.marginLeft = "-1292px"
+        document.querySelector("#slideP1").style.display = "flex"
+        document.querySelector("#slide1").style.display = "none"
+    }
+    document.querySelector("#slideP1").onclick = () => {
+        document.querySelector(".slide").style.marginLeft = "0"
+        document.querySelector("#slideP1").style.display = "none"
+        document.querySelector("#slide1").style.display = "flex"
+    }
+    let t = document.querySelectorAll(".fil-title")
+    for (let i = 0; i < t.length; i++) {
+        t[i].addEventListener("click", () => {
+            t[i].classList.toggle("fil-active")
+        })
+    }
+    let login = JSON.parse(localStorage.getItem("token"))
+    if (login) {
+        document.querySelector(".sign-log").classList.add("loged")
+    }
+
+</script>
+<script type="module" src="/scripts/search.js"></script>
+<script type="module" src="/scripts/cat-menu.js"></script>
+<script type="module" src="/scripts/product.js"></script>
+<script>
+
+    function fil(val, cat) {
+        let filter = { val: val, cat: cat }
+        localStorage.setItem("filter", JSON.stringify(filter))
+    }
+    let p = document.querySelectorAll(".fil-data>p");
+    for (let i = 0; i < p.length; i++) {
+        p[i].addEventListener("click", () => {
+            p[i].childNodes[1].setAttribute("checked", "true");
+            p[i].classList.toggle("p-ac-cat");
+            checkP(p[i]);
+        });
+    }
+    function checkP(p) {
+        if (!p.classList.contains("p-ac-cat")) {
+            p.childNodes[1].removeAttribute("checked");
+        }
+        8146666686
+    }
+    document.querySelector(".filter-toggle").addEventListener("click", () => {
+        document.querySelector(".left-filters").classList.toggle("filters-disabled")
+    })
+</script>
+
+<script>
+    let catData = JSON.parse(localStorage.getItem("catData"));
+    let subCat = document.querySelector(".sub-cat-fil");
+    let topicCat = document.querySelector(".topic-cat-fil");
+    let main = "<%=main%>"
+    let subl = "<%=sub%>"
+    let tag = "<%=tag%>"
+    catData.map((sub) => {
+        let p = document.createElement("p");
+        p.classList.add("sub-cat-p");
+        if (subl == sub.cat1.toLowerCase()) {
+            p.innerHTML = `<input type="checkbox" checked="true"> ${sub.cat1}`;
+        } else p.innerHTML = `<input type="checkbox"> ${sub.cat1}`;
+        subCat.append(p);
+        p.addEventListener("click", () => {
+            location.href = `/courses/${main}/${sub.cat1.toLowerCase()}`
+        });
+        if (sub.sub1) {
+            sub.sub1.map((cat) => {
+                let p = document.createElement("p");
+                if (tag == cat.toLowerCase())
+                    p.innerHTML = `<input type="checkbox" checked="true"> ${cat}`;
+                else
+                    p.innerHTML = `<input type="checkbox" > ${cat}`;
+                if (p.innerHTML !== "") {
+                    topicCat.append(p);
+                }
+                p.addEventListener("click", () => {
+                    location.href = `/courses/${main}/${sub.cat1.toLowerCase()}/${cat.toLowerCase()}`
+                });
+            });
+        }
+    });
+    let fils = document.getElementsByClassName("fil-p");
+
+    for (let i = 0; i < fils.length; i++) {
+        fils[i].addEventListener("click", () => {
+            let [v, c] = fils[i].childNodes[1].value.split(",");
+            if (c == "level") {
+                if (v == "all-levels") {
+                    v = v.replace("-", " ")
+                }
+                console.log(subl)
+                if (subl == "") {
+                    if (main == "courses") {
+                        location.href = `/courses?level=${v}`
+                    } else {
+                        location.href = `/courses/${main}?level=${v}`
+                    }
+                } else if (tag == "") {
+                    location.href = `/courses/${main}/${subl}?level=${v}`
+                } else {
+                    location.href = `/courses/${main}/${subl}/${tag}?level=${v}`
+                }
+            } else if (v == "free") {
+                let cat = JSON.parse(localStorage.getItem("cat")) + " for " + v;
+                location.href = "/courses"
+            }
+        });
+    }
+</script>

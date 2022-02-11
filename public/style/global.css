@@ -1,0 +1,57 @@
+@import url('../assets/FontsFree-Net-SFProText-Regular.ttf');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color:var(--primary-color)
+}
+:root{
+    --primary-color:#1c1d1f;
+    --faded-color:#414141;
+    --secondary-color:#535353;
+    --background-color:#fff;
+    --top-nav-bg:#98bfec;
+    --blue-color:blue;
+    --font-size:0.95rem;
+    --font-medium:1.2rem;
+    --font-large: 3.2rem;
+    --font-family-sf:'sf pro text', sans-serif;
+    --pri-font-weight:300;
+    --bold-font-weight:bold;
+    --large-padding:1rem;
+    --main-width:1292px;
+}
+.dark-theme{
+    --primary-color:#fff;
+    --faded-color:#8b8b8b;
+    --secondary-color:#808080;
+    --background-color:#1c1d1f;
+    --top-nav-bg:#98bfec;
+    --blue-color:rgb(91, 91, 255);
+    --font-size:0.95rem;
+    --font-medium:1.2rem;
+    --font-large: 3.2rem;
+    --font-family-sf:'sf pro text', sans-serif;
+    --pri-font-weight:300;
+    --bold-font-weight:bold;
+    --large-padding:1rem;
+    --main-width:1292px;
+    background-color:#1C1D1F;
+}
+.dark-theme .icon{
+    filter:invert();
+}
+footer{
+    padding:20px 0px;
+    font-family: var(--font-family-sf);
+}
+* {
+    -webkit-touch-callout: none; 
+      -webkit-user-select: none; 
+       -khtml-user-select: none; 
+         -moz-user-select: none; 
+          -ms-user-select: none;
+              user-select: none;
+  }

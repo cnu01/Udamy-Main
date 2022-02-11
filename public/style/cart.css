@@ -1,0 +1,226 @@
+body {
+	font-family: sf pro text;
+}
+.container {
+	width: 100%;
+	
+}
+.Shopping_inner {
+	display: flex;
+	width: 70%;
+	/* height: 4em; */
+	margin-left: 9%;
+	align-content: center;
+}
+.Shopping {
+	font-family: SuisseWorks, Georgia, Times, times new roman, serif,
+		apple color emoji, segoe ui emoji, segoe ui symbol;
+	font-weight: 700;
+	font-size: 1.3em;
+	line-height: 1.15;
+	letter-spacing: -0.5px;
+}
+.Courses_cart {
+	margin-left: 9%;
+}
+.in_div {
+	display: grid;
+	grid-template-columns: repeat(1, 100%);
+	text-align: center;
+	vertical-align: middle;
+
+	margin-left: 9%;
+	width: 80%;
+	height: 100%;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#container {
+	width: 100%;
+}
+.btn {
+	display: inline-block;
+	margin-bottom: 0;
+	font-weight: 700;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	background-image: none;
+	padding: 11px 12px;
+	font-size: 15px;
+	line-height: 1.35135;
+	text-decoration: none;
+	background-color: #a435f0;
+	color: #fff;
+}
+
+.empty-cart-img {
+	margin: auto;
+}
+#courses_zero {
+	font-weight: normal;
+	font-size: 1.5em;
+}
+.card-empty {
+	font-size: 1.1em;
+}
+
+#scripitimg {
+	width: 18%;
+}
+#maindiv {
+	display: inline-block;
+	width: 50%;
+	height: 100px;
+	margin-left: 9%;
+}
+#courseTitle {
+	font-weight: 3px;
+}
+
+#jsdata {
+	width: 100%;
+}
+#div_for_ap img{
+	width: 200px;
+}
+.remove_add{
+	display:flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+.hours_total_lecutres{
+	height: 80px !important;
+}
+.author_h2{
+	margin-top: 30px !important;
+}
+#card_right {
+	display: inline-block;
+	width: 58%;
+	height: 100%;
+	vertical-align: top;
+	margin-left: 9%;
+}
+#card_left {
+	display: inline-block;
+	width: 30%;
+	height: 100%;
+
+	vertical-align: top;
+}
+#div_for_ap {
+	width: 100%;
+	height: 40%;
+	overflow: hidden;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+		rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+.image1 {
+	height: 75%;
+}
+#div_for_ap {
+	display: flex;
+}
+.div_coursedetails {
+	margin-left: 3%;
+
+	width: 48%;
+	margin-top: 1%;
+	height: 100%;
+}
+.price_cartshop {
+	width: 20%;
+
+	height: 100%;
+}
+.remove_add {
+	width: 20%;
+
+	height: 100%;
+}
+.title_h2 {
+	font-size: 14px;
+	margin-top: 0px;
+}
+.author_h2 {
+	font-size: 12px;
+	margin-top: -9px;
+}
+.hours_total_lecutres {
+	display: flex;
+	width: 100%;
+	height: 10%;
+	gap: 5px;
+	font-size: 12px;
+	align-items: center;
+	margin-top: -15px;
+}
+.universal_remove_add {
+	margin: 0px;
+	margin-left: 20%;
+	margin-top: 10px;
+	font-size: 12px;
+	color: #a435f0;
+}
+.price_before_disc {
+	margin-left: 50%;
+	font-weight: normal;
+	text-decoration: line-through;
+}
+.last_price {
+	margin-left: 50%;
+	color: #a435f0;
+	font-weight: bolder;
+	margin-top: 30px;
+}
+#div_for_price_and_all {
+	margin: auto;
+	margin-top: 5%;
+	width: 80%;
+	height: 120%;
+}
+.Button_for_checkout {
+	width: 85%;
+	height: 60px;
+	color: white;
+	font-size: large;
+	background-color: #a435f0;
+}
+#cart_price_totla {
+	font-size: 20px;
+	margin: 0%;
+	text-decoration: none;
+	font-weight: normal;
+}
+#cart_price_amount {
+	font-size: 40px;
+	margin: 0%;
+}
+#cart_price_oof {
+	margin: 0%;
+	margin-bottom: 30px;
+	text-decoration: line-through;
+}
+#input_for_checkout {
+	margin-top: 30px;
+	font-size: 20px;
+}
+#but_for_appaly {
+	font-size: 20px;
+	background-color: #a435f0;
+	text-decoration: none;
+	color: #fff;
+}
+button{
+	border: none;
+	cursor: pointer;
+}
+#remove_h61{
+	cursor: pointer;
+}
+#div_for_ap{
+	margin: 10px;
+}
+a[href="checkout.html"]{
+	color:white;
+}

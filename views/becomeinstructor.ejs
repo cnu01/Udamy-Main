@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>page</title>
+      <link rel="stylesheet" href="/style/becomeinstructor.css">
+</head>
+
+<body>
+      <nav class="nav-top">
+            <div class="nav-left">
+                  <div class="nav-back">
+                        <p><img style="filter:invert(); transform: rotate(180deg);width: 25px; margin-right: 10px"
+                                    src="/assets/next.png" alt="" srcset="">Back to courses</p>
+                  </div>
+            </div>
+
+            <div class="nav-right">
+                  <button>Save</button>
+            </div>
+      </nav>
+      <div id="main">
+            <div>
+                  <img class="img1" src="https://s.udemycdn.com/teaching/billboard-desktop-v4.jpg" alt="">
+                  <h1 class="h">Come Teach <br> with Us</h1>
+                  <p class="p1">Become Instructor and change <br> lives -- including your own</p>
+                  <a id="getstarted" href="/instructor/create/1" class="p2">Get Started</a>
+            </div>
+
+            <p class="so">So Many Reasons to Start</p>
+
+
+      </div>
+      <div class="reasons">
+            <div class="teach">
+                  <img src="https://s.udemycdn.com/teaching/value-prop-teach-v3.jpg" alt="">
+                  <h1>Teach your Way</h1>
+                  <p>Publish the course you want, in the way you want,<br> and always have of control your own <br>
+                        content.</p>
+            </div>
+            <div class="teach">
+                  <img src="https://s.udemycdn.com/teaching/value-prop-inspire-v3.jpg" alt="">
+                  <h1>Inspire learners</h1>
+                  <p>Teach what you know and help learners explore <br>
+                        their interests, gain new skills, and advance their <br> careers</p>
+            </div>
+            <div class="teach">
+                  <img src="https://s.udemycdn.com/teaching/value-prop-get-rewarded-v3.jpg" alt="">
+                  <h1>Get rewarded</h1>
+                  <p>Expand your professional network, build your <br> expertise, and earn money on each paid <br>
+                        enrollment.</p>
+            </div>
+
+      </div>
+
+      <div class="blueback">
+            <div class="students">
+                  <p class="ptag">40M</p>
+                  <p>Students</p>
+            </div>
+            <div class="students">
+                  <p class="ptag">65+</p>
+                  <p>Languages</p>
+            </div>
+            <div class="students">
+                  <p class="ptag">480M</p>
+                  <p>Enrollments</p>
+            </div>
+            <div class="students">
+                  <p class="ptag">180+</p>
+                  <p>Countries</p>
+            </div>
+            <div class="students">
+                  <p class="ptag">7000+</p>
+                  <p>Enterprise Customers</p>
+            </div>
+      </div>
+
+      <p class="so">How to Begin</p>
+
+
+
+      <div class="launch">
+            <p class="plan">Plan Your Curriculam</p>
+            <p class="plan">Record your Video</p>
+            <p class="plan">Lanuch your course</p>
+      </div>
+      <div class="para">
+            <div class="left">
+                  <p>You start with your passion and knowledge. <br> Then choose a promising topic with the help of <br>
+                        our Marketplace Insights tool.</p>
+
+                  <p>The way that you teach — what you bring to it — is up to you.</p>
+                  <p class="help">How we help you</p>
+                  <p>
+                        We offer plenty of resources on how to create <br> your first course. And, our instructor
+                        dashboard <br> and curriculum pages help keep you organized.
+                  </p>
+            </div>
+            <div>
+                  <img class="img2" src="https://s.udemycdn.com/teaching/plan-your-curriculum-v3.jpg" alt="">
+
+            </div>
+      </div>
+
+      <div class="para">
+            <div>
+                  <img src="https://s.udemycdn.com/teaching/instructors/en/frank-1x-v2.jpg" alt="">
+            </div>
+            <div>
+                  <p class="right">“I’m proud to wake up knowing my work is helping people around the world improve
+                        their careers and build great things. While being a full-time instructor is hard work, it lets
+                        you work when, where, and how you want.”</p>
+                  <p class="right1 name">Frank Kane</p>
+                  <p class="right1">Data Science & IT Certifications</p>
+            </div>
+      </div>
+
+      <div class="last">
+            <div class="img3">
+                  <img src="https://s.udemycdn.com/teaching/support-1-v3.jpg" alt="">
+            </div>
+            <div class="ps">
+                  <p class="wont">You won’t have to do it alone</p>
+                  <p class="our">Our Instructor Support Team is here to answer your questions and review your test
+                        video, while our Teaching Center gives you plenty of resources to help you through the process.
+                        Plus, get the support of experienced instructors in our online community.</p>
+                  <p class="b">Need more details before you start? Learn more</p>
+            </div>
+            <div class="img3">
+                  <img src="https://s.udemycdn.com/teaching/support-2-v3.jpg" alt="">
+            </div>
+      </div>
+
+      <div class="become">
+            <p class="be">Become an Instructor Today</p>
+            <p class="join">Join one of the world’s largest online learning <br> marketplaces.</p>
+            <a id="getstarted" href="/instructor/create/1" class="p3">Get Started</a>
+
+      </div>
+
+      <footer style=" margin-top:100px; position:relative; background-color: black; color:white !important;">
+
+      </footer>
+</body>
+
+</html>
+<script type="module">
+      import footer from "./components/footer.js"
+      document.querySelector("footer").innerHTML = footer()
+      document.querySelector(".nav-back").onclick = () => { location.href = "/" }
+</script>

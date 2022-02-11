@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/courseupload.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="top">
+        <div class="left">
+            <div class="back">
+                <p><img style="filter:invert(); transform: rotate(180deg);width: 25px; margin-right: 10px"
+                        src="/assets/next.png" alt="" srcset="">Back to courses</p>
+            </div>
+        </div>
+
+        <div class="right">
+            <button>Save</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <form action="/coursedata" enctype="multipart/form-data" method="post">
+            <div class="field">
+                <label for="title">Title of your course</label>
+                <input type="text" id="title" name="title">
+            </div>
+            <div class="field">
+                <label for="creater_name">Creater name</label>
+                <input type="text" id="creater_name" name="creater_name">
+            </div>
+            <div class="field">
+                <label for="description">description of your course</label>
+                <input type="text-area" id="description" name="description">
+            </div>
+            <div class="field">
+                <label for="price">Price of your course</label>
+                <input type="number" id="price" name="price">
+            </div>
+            <div class="field">
+                <label for="original_price">Original price of your course</label>
+                <input type="number" id="original_price" name="original_price">
+            </div>
+            <div class="field">
+                <label for="duration">Duration of your course</label>
+                <select id="duration" name="duration">
+                    <option value="1">less than a hour</option>
+                    <option value="2">2 hours</option>
+                    <option value="3">3 hours</option>
+                    <option value="4">4 hours</option>
+                    <option value="5">5 hours</option>
+                    <option value="6">More that 6 hours</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="lecture">Number of lectures</label>
+                <select id="lecture" name="lecture">
+                    <option value="1">less than one</option>
+                    <option value="2">2 lectures</option>
+                    <option value="3">3 lectures</option>
+                    <option value="4">4 lectures</option>
+                    <option value="5">5 lectures</option>
+                    <option value="6">More that 6 lectures</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="level">levels of your course</label>
+                <select id="level" name="level">
+                    <option value="all levels">All levels</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="expert">Expert</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="video">Video link</label>
+                <input type="text" id="video" name="video" placeholder="Put YouTube video link">
+            </div>
+            <input type="hidden" name="tag" id="tag">
+            <div class="right-field">
+                <label for="thumbnails">Video thumbnails</label>
+                <input type="file" id="thumbnails" name="thumbnails">
+                <input type="submit" value="Submit">
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
+<script>
+    let tag = JSON.parse(localStorage.getItem("create-course"))
+    document.querySelector("#tag").value = tag.tag || "61e924bc9ad44ed5f41a26c0"
+    document.querySelector(".back").onclick = () => location.href = "/instructor/create/4"
+</script>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="style/global.css">
+  <link rel="stylesheet" href="style/checkout.css" />
+</head>
+
+<body>
+  <div id="small_nav">
+    <div id="udemy_logo">
+      <a href="index.html"> <img id="nav_img" src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" /></a>
+    </div>
+    <div id="prev">
+      <a href="cart.html">Cancel</a>
+    </div>
+  </div>
+  <div id="checkout">
+    <h1 style="margin-left: 1%">Checkout</h1>
+    <span>
+      <p id="add">Billing Address</p>
+      <input class="c_s_name" list="country_name" placeholder="Country" />
+      <datalist id="country_name">
+        <option value="India"></option>
+        <option value="Australia"></option>
+        <option value="United States"></option>
+        <option value="Sweden"></option>
+        <option value="Canada"></option>
+        <option value="Japan"></option>
+        <option value="Germany"></option>
+        <option value="Switzerland"></option>
+        <option value="New Zealand"></option>
+        <option value="Netherland"></option>
+      </datalist>
+    </span>
+    <span>
+      <input class="c_s_name" list="state_name" placeholder="State / Union Territory" />
+      <datalist id="state_name">
+        <option value="Madhya Predesh"></option>
+        <option value="Maharashtra"></option>
+        <option value="Uttar Pradesh"></option>
+        <option value="Gujrat"></option>
+        <option value="Andhra Pradesh"></option>
+        <option value="Odisha"></option>
+        <option value="Tamil Nadu"></option>
+        <option value="Chhattisgarh"></option>
+        <option value="Telengana"></option>
+        <option value="West Bengal"></option>
+      </datalist>
+    </span>
+    <div class="card_option">
+      <span><input name="opt" type="radio" /></span>
+      <span class="card_name">New Payment Card</span>
+      <div class="img_div">
+        <img class="card_images" src="https://www.udemy.com/staticx/udemy/images/v9/card-mastercard.svg" /></a>
+      </div>
+    </div>
+    <div class="card_option">
+      <span><input name="opt" type="radio" /></span>
+      <span class="card_name">New Banking</span>
+    </div>
+    <div class="card_option">
+      <span><input name="opt" type="radio" /></span>
+      <span class="card_name">UPI</span>
+      <div class="img_div">
+        <img class="card_images" src="https://www.udemy.com/staticx/udemy/images/v9/hpp-upi.svg" />
+      </div>
+    </div>
+    <div class="card_option">
+      <span><input name="opt" type="radio" /></span>
+      <span class="card_name">PayTM</span>
+      <div class="img_div">
+        <img class="card_images" src="https://www.udemy.com/staticx/udemy/images/v9/hpp-paytm.svg" />
+      </div>
+    </div>
+    <div class="card_option">
+      <span><input name="opt" type="radio" /></span>
+      <span class="card_name">Wallets India</span>
+    </div>
+    <div id="card_dets">
+      <input class="full_inp" type="text" placeholder="Name on Card" />
+      <input class="full_inp" type="number" placeholder="Card Number" />
+      <div id="MYS">
+        <span>
+          <input class="half_inp" list="mm" placeholder="MM" />
+          <datalist id="mm">
+            <option value="01"></option>
+            <option value="02"></option>
+            <option value="03"></option>
+            <option value="04"></option>
+            <option value="05"></option>
+            <option value="06"></option>
+            <option value="07"></option>
+            <option value="08"></option>
+            <option value="09"></option>
+            <option value="10"></option>
+            <option value="11"></option>
+            <option value="12"></option>
+          </datalist>
+        </span>
+        <span>
+          <input class="half_inp" list="YY" placeholder="YYYY" />
+          <datalist id="YY">
+            <option value="2021"></option>
+            <option value="2022"></option>
+            <option value="2023"></option>
+            <option value="2024"></option>
+            <option value="2025"></option>
+            <option value="2026"></option>
+            <option value="2027"></option>
+            <option value="2028"></option>
+            <option value="2029"></option>
+            <option value="2030"></option>
+            <option value="2031"></option>
+            <option value="2032"></option>
+          </datalist>
+        </span>
+        <span>
+          <input class="half_inp" type="text" placeholder="Security Code" />
+        </span>
+      </div>
+      <div id="chk_box">
+        <input type="checkbox" checked="checked" />
+        <span>Remember this card</span>
+      </div>
+    </div>
+    <div id="order_dets">
+      <h2>Order Details</h2>
+    </div>
+  </div>
+  <div id="summary">
+    <h1>Summary</h1>
+    <p>Original price: <b class="summary-price">2</b></p>
+    <p>Coupon discounts: <b>30%</b> </p>
+    <hr />
+    <span>Total: <h2 style="display:inline;" class="total-price">22</h2></span><br />
+    <p class="sum_p">
+      Udemy is required by law to collect applicable transaction taxes for
+      purchases made in certain tax jurisdictions.
+    </p>
+    <p class="sum_p">
+      By completing your purchase you agree to these
+      <span style="color: rgb(45, 45, 226); font-weight: 700">Terms of Service</span>.
+    </p>
+    <button class="btn">
+      <a href="/payment">Complete Payment</a> </button>
+  </div>
+</body>
+
+</html>
+<script>
+  let cart = JSON.parse(localStorage.getItem("countCart")).length || 0;
+  let total = 525 * cart
+  document.querySelector(".summary-price").textContent = total
+  let discounts = total - (30 / 100 * total)
+  document.querySelector(".total-price").textContent = discounts
+</script>

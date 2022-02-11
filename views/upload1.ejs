@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/step1.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="top">
+        <div class="left">
+            <div class="logo">
+                <img src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" alt="" srcset="">
+            </div>
+            <div class="steps">
+
+                <p>Step<span class="step-count">
+                        1
+                    </span>
+                    of
+                    4</p>
+            </div>
+        </div>
+
+        <div class="right">
+            <a href="/instructor">Exit</a>
+        </div>
+        <div class="process"></div>
+    </nav>
+
+    <div class="container">
+        <h1>First, let's find out what type of course you're making.</h1>
+        <div class="text-div">
+            <div class="course-type left-type">
+                <div class="icon">
+                    <img src="/assets/video.png" alt="" srcset="">
+                </div>
+                <div class="content">
+                    <h3>course</h3>
+                    <p>Create rich learning experiences with the help of video lectures, quizzes, coding exercises, etc.
+                    </p>
+                </div>
+            </div>
+            <div class="course-type right-type">
+                <div class="icon">
+                    <img src="/assets/trainee.png" alt="" srcset="">
+                </div>
+                <div class="content">
+                    <h3>Practice Test</h3>
+                    <p>Help students prepare for certification exams by providing practice questions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="buttons">
+            <a href="/instructor/create/2"> <button>Continue</button></a>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script>
+    let left = document.querySelector(".left-type")
+    let right = document.querySelector(".right-type")
+
+    left.onclick = () => {
+        left.classList.add("selected")
+        right.classList.remove("selected")
+    }
+    right.onclick = () => {
+        right.classList.add("selected")
+        left.classList.remove("selected")
+    }
+</script>

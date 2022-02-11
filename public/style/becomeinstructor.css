@@ -1,0 +1,236 @@
+@import url('/assets/FontsFree-Net-SFProText-Regular.ttf');
+.nav-top{
+    align-items: center;
+   display:flex;
+   position: fixed;
+   top: 0;
+   margin-left: -10px;
+   width: 100%;
+   padding:0px 20px;
+   box-sizing: border-box;
+   justify-content:space-between;
+   background-color: black;
+   color: white;
+   height: 50px;
+
+}
+.nav-left{
+   display:flex;
+   align-items: center;
+}
+.nav-back p{
+    font-size: 19px;
+    display:flex;
+    cursor: pointer;
+    align-items: center;
+    padding-left: 30px;
+    font-weight: 100;
+ }
+ .nav-right button{
+       display: none;
+     background-color:gray;
+     border:none;
+     color:white;
+     cursor: pointer;
+     margin-right: 30px;
+     padding:7px 20px;
+ }
+
+ /* //////////// */
+#main{
+     
+      width: 100%;
+      height: auto;
+}
+.img1{
+      margin-top: 50px;
+      width: 90%;
+      height: 600px;
+      box-sizing: border-box;
+}
+.h{
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      font-weight: bold;
+      font-size: 3.5rem;
+}
+.p1{
+      position:absolute;
+      top: 45%;
+      left: 10%;
+      font-weight: bolder;
+      font-size: 1.5rem;
+}
+.p2{
+      position: absolute;
+      top: 57%;
+      left: 14%;
+      font-size: 2rem;
+      font-weight: bold;
+      background-color: black;
+      color: white;
+      padding:10px
+}
+.so{
+      text-align: center;
+      font-weight: bold;
+      font-size: 2rem;
+      margin-top: 4rem;
+}
+.reasons{
+      display: flex;
+      margin: auto;     
+
+}
+.teach{
+      margin: auto;
+      text-align: center;
+      
+}
+.blueback{
+      display: flex;
+      background-color: blue;
+      color: white;
+       margin: auto;
+}
+.students{
+      margin: auto;
+}
+
+
+.ptag{
+      font-size: 2.5rem;
+      margin-bottom: 2px;
+}
+
+
+.launch{
+      width: 70%;
+      margin: auto;
+      display: flex;
+      font-size: 1.5rem;
+      color: darkgray;
+      font-weight: bold;
+}
+.plan{
+      margin: auto;
+}
+
+.plan:hover{
+      color: black;
+}
+
+.para{
+      width: 70%;
+      margin: auto;
+      display: flex;
+      font-size: 18px;
+     
+}
+.help{
+      font-weight: bold;
+      font-size: 22px;
+}
+.left{
+      margin-top: 2rem;
+}
+.img2{
+      height: 25rem;
+}
+.right{
+      margin-top: 4rem;
+      line-height: 2rem;
+      margin-left: 20px;
+}
+
+.right1{
+      margin-left: 20px;
+}
+.name{
+      font-weight: bold;
+}
+.last{
+      display: flex;
+}
+.img3{
+      margin: auto;
+      margin-left: -10rem;
+      
+}
+.wont{
+      font-size: 2rem;
+      font-weight: bold;
+      padding-right: 5rem;
+      line-height: 2rem;
+
+}
+.ps{
+      margin-top: 5rem;
+}
+.b{
+      color: blue;
+      text-decoration: underline;
+}
+.our{
+      font-size: 1.2rem;
+      line-height: 2rem;
+}
+.p3{
+      
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+      background-color: black;
+      width: 50%;
+      margin: auto;
+      padding:5px;
+
+}
+
+.become{
+      text-align: center;
+      width: 50%;
+      margin: auto;
+}
+.be{
+      font-weight: bold;
+      font-size: 3rem;
+}
+.join{
+      font-size: 1.6rem;
+      font-weight: bold;
+}
+.class1{
+      width: 300px;
+      height: 100px;
+      margin: auto;
+}
+
+#boxmodel{
+      width: 300px;
+      height: 500px;
+      
+}
+input{
+      margin-top: 10px;
+      padding: 10px;
+}
+.leftpad{
+      margin-left: 10px;
+}
+
+.signup{
+      width: 80%;
+      background-color: slateblue;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      margin:1rem;
+}
+.bold{
+      margin-top: 20px;
+}
+a{
+      text-decoration: none;
+}
