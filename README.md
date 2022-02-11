@@ -1,24 +1,44 @@
-# Uniqlo-clone
-Cloning Uniqlo website.
+# UDEMY
+<a href="https://medium.com/@srinivasfw13/udemy-com-website-clone-74a1e001be8b">Blog Link</a>
 
- Uniqlo is a Japanese casual wear clothing store and brand that has gained international fame. The affordable, basic designs are a hit with almost everyone
+## What is Udemy?
+
+Udemy is a platform that allows instructors to build online courses on their preferred topics. Using Udemy's course development tools, they can upload videos, PowerPoint presentations, PDFs, audio, ZIP files and live classes to create courses. Students can enroll Courses.
+
+## Udemy Features
+
+
+ * Courses
+   * Each course can be individually viewed to see additional data and course information.
+   * After selecting a course to view, a list of suggested similar courses is populated.
+   * Videos can be played while viewing a course.
+   
+ ![carousel movement](https://miro.medium.com/max/1400/1*M_bAuwaQKpYM8MMbmLs8JQ.png)
+
+  
+ * Searching/ Browsing
+   * Users have access to a search feature that allows quick navigation of matching courses.
+   * Courses can additionally be browsed by clicking on arrow buttons in a row of similar courses.
+   * Results of searches can be sorted by multiple factors.
+   
+   ![carousel movement](https://miro.medium.com/max/1400/1*GekW1j3Ln24BLArpkdu_HA.png)
  
- TechStack  :  
  
- <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/>       <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a>                   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>
+ * Cart
+   * Students can add the courses to Cart, remove from cart. 
+   * Apply coupon, Checkout.
+   
+![search results](https://miro.medium.com/max/1400/1*RLbNYuITHTOSzVEd6W-mIQ.png)
 
-Landing page
 
-![Screenshot (51)](https://miro.medium.com/max/3786/1*VWWyKuzBCGh2ipERuP4d_Q.png)
+## Technologies Used
 
-Signup
+ * Backend
+   * Database: MonogoDb
+   * Framework: Express
+   * Authentication: BCrypt
+  
+ * Frontend 
+   * State Management: Redux
+   * CSS3,HTML,CSS
 
-![Screenshot (55)](https://miro.medium.com/max/875/1*NW0hgxzqK31Qebv2MNqkTQ.png)
-
-Products page
-
-![Screenshot (56)](https://miro.medium.com/max/875/1*D4GW0TdEhANt9J4vUOvVBw.png)
-
-Sections page
-
-![Screenshot (58)](https://miro.medium.com/max/875/1*OjQzHmVFRNe43byIqf-jPg.png)
